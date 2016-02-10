@@ -14,20 +14,22 @@
 		8E99E55C1C59069800121C88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E99E55B1C59069800121C88 /* ViewController.swift */; };
 		8E99E55F1C59069800121C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E99E55D1C59069800121C88 /* Main.storyboard */; };
 		8E99E5611C59069800121C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E99E5601C59069800121C88 /* Assets.xcassets */; };
-		8E99E5641C59069800121C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E99E5621C59069800121C88 /* LaunchScreen.storyboard */; };
+		8ED880E51C6ABF8A001D60D2 /* Attributes in Resources */ = {isa = PBXBuildFile; fileRef = 8ED880E41C6ABF8A001D60D2 /* Attributes */; };
+		8ED880E71C6AC0A8001D60D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED880E61C6AC0A8001D60D2 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5AF15C82F13CBF644BA521B2 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4F94551C590A2B00ABCFD6 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		8E4F94571C590A8100ABCFD6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8E99E5561C59069800121C88 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E99E5561C59069800121C88 /* Hot Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hot Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E99E5591C59069800121C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E99E55B1C59069800121C88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E99E55E1C59069800121C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E99E5601C59069800121C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E99E5631C59069800121C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E99E5651C59069800121C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED880E41C6ABF8A001D60D2 /* Attributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attributes; sourceTree = "<group>"; };
+		8ED880E61C6AC0A8001D60D2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B8A70A8912EA91EA7BC912FF /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		F47BD59FC46AB4346F509368 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +68,7 @@
 		8E99E5571C59069800121C88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E99E5561C59069800121C88 /* Weather.app */,
+				8E99E5561C59069800121C88 /* Hot Weather.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,10 +80,11 @@
 				8E99E55B1C59069800121C88 /* ViewController.swift */,
 				8E99E55D1C59069800121C88 /* Main.storyboard */,
 				8E99E5601C59069800121C88 /* Assets.xcassets */,
-				8E99E5621C59069800121C88 /* LaunchScreen.storyboard */,
 				8E99E5651C59069800121C88 /* Info.plist */,
 				8E4F94551C590A2B00ABCFD6 /* Weather.swift */,
 				8E4F94571C590A8100ABCFD6 /* Constants.swift */,
+				8ED880E41C6ABF8A001D60D2 /* Attributes */,
+				8ED880E61C6AC0A8001D60D2 /* Launch Screen.storyboard */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -97,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E99E5551C59069800121C88 /* Weather */ = {
+		8E99E5551C59069800121C88 /* Hot Weather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E99E5681C59069800121C88 /* Build configuration list for PBXNativeTarget "Weather" */;
+			buildConfigurationList = 8E99E5681C59069800121C88 /* Build configuration list for PBXNativeTarget "Hot Weather" */;
 			buildPhases = (
 				A78279CB8CC84B72D3951E40 /* Check Pods Manifest.lock */,
 				8E99E5521C59069800121C88 /* Sources */,
@@ -112,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = Weather;
+			name = "Hot Weather";
 			productName = Weather;
-			productReference = 8E99E5561C59069800121C88 /* Weather.app */;
+			productReference = 8E99E5561C59069800121C88 /* Hot Weather.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,6 +132,7 @@
 				TargetAttributes = {
 					8E99E5551C59069800121C88 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GE7WBQ3TPK;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -137,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E99E5511C59069800121C88 /* Build configuration list for PBXProject "Weather" */;
+			buildConfigurationList = 8E99E5511C59069800121C88 /* Build configuration list for PBXProject "Hot Weather" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -150,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E99E5551C59069800121C88 /* Weather */,
+				8E99E5551C59069800121C88 /* Hot Weather */,
 			);
 		};
 /* End PBXProject section */
@@ -160,8 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E99E5641C59069800121C88 /* LaunchScreen.storyboard in Resources */,
+				8ED880E51C6ABF8A001D60D2 /* Attributes in Resources */,
 				8E99E5611C59069800121C88 /* Assets.xcassets in Resources */,
+				8ED880E71C6AC0A8001D60D2 /* Launch Screen.storyboard in Resources */,
 				8E99E55F1C59069800121C88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,14 +242,6 @@
 				8E99E55E1C59069800121C88 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8E99E5621C59069800121C88 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E99E5631C59069800121C88 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,10 +333,14 @@
 			baseConfigurationReference = B8A70A8912EA91EA7BC912FF /* Pods-Weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Weather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anseha.Weather;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hot Weather";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,17 +349,21 @@
 			baseConfigurationReference = F47BD59FC46AB4346F509368 /* Pods-Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = Weather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anseha.Weather;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hot Weather";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E99E5511C59069800121C88 /* Build configuration list for PBXProject "Weather" */ = {
+		8E99E5511C59069800121C88 /* Build configuration list for PBXProject "Hot Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E99E5661C59069800121C88 /* Debug */,
@@ -367,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E99E5681C59069800121C88 /* Build configuration list for PBXNativeTarget "Weather" */ = {
+		8E99E5681C59069800121C88 /* Build configuration list for PBXNativeTarget "Hot Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E99E5691C59069800121C88 /* Debug */,

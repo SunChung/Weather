@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-let URL_BASE = "http://api.openweathermap.org/data/2.5/weather?q="
-let CITY = "miramar"
+let URL_BASE_GPS = "http://api.openweathermap.org/data/2.5/weather?"
 let API_KEY = "&appid=3a5198449205135ddb3e265bea29fb70"
 let IMPERIAL = "&units=imperial"
 let METRIC = "&units=metric"

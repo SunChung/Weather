@@ -30,31 +30,31 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-CR-0Ox">
-                                        <rect key="frame" x="130" y="45" width="300" height="30"/>
+                                        <rect key="frame" x="233" y="45" width="95" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="HcH-w8-7Xy"/>
-                                            <constraint firstAttribute="width" constant="300" id="PaC-b6-REe"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="PaC-b6-REe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-To-21h">
                                         <rect key="frame" x="205" y="80" width="150" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="61W-eA-3v3"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="61W-eA-3v3"/>
                                             <constraint firstAttribute="width" constant="150" id="KFS-pU-eTr"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-rH-6HV">
-                                        <rect key="frame" x="163" y="235" width="235" height="153"/>
+                                        <rect key="frame" x="160" y="235" width="240" height="153"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="kr5-YK-znh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="kr5-YK-znh">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="153"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="F50-HP-O8a"/>
@@ -67,10 +67,10 @@
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-Ry-AuJ">
-                                                <rect key="frame" x="205" y="0.0" width="30" height="60"/>
+                                                <rect key="frame" x="205" y="0.0" width="35" height="60"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="40"/>
                                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="F">
+                                                <state key="normal" title="F°">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -126,7 +126,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="P01-ay-VMc">
                                                 <rect key="frame" x="60" y="0.0" width="50" height="21"/>
@@ -138,7 +138,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="cZR-4E-KEc">
                                                 <rect key="frame" x="120" y="0.0" width="50" height="21"/>
@@ -150,7 +150,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-ea-ZYc">
                                                 <rect key="frame" x="180" y="0.0" width="50" height="21"/>
@@ -162,7 +162,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -212,7 +212,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="2ab-94-kbE">
                                                 <rect key="frame" x="60" y="0.0" width="50" height="21"/>
@@ -224,7 +224,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="DPk-Ka-INY">
                                                 <rect key="frame" x="120" y="0.0" width="50" height="21"/>
@@ -236,7 +236,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ElG-gr-J2w">
                                                 <rect key="frame" x="180" y="0.0" width="50" height="21"/>
@@ -248,7 +248,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                         </subviews>
                                     </stackView>

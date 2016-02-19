@@ -48,7 +48,7 @@ class Weather {
     
     var temperature : String {
         if self._temperature == nil {
-            _temperature = "--"
+            _temperature = ""
         }
         return _temperature
     }

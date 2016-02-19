@@ -37,14 +37,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if degreeTest == true {
             
-            self.degreeLabel.setTitle("F", forState: UIControlState.Normal)
+            self.degreeLabel.setTitle("F°", forState: UIControlState.Normal)
             weather.celsiusToFahrenheit(degreeTest)
             getWeather()
             degreeTest = false
             
         } else {
             
-            self.degreeLabel.setTitle("C", forState: UIControlState.Normal)
+            self.degreeLabel.setTitle("C°", forState: UIControlState.Normal)
             weather.celsiusToFahrenheit(degreeTest)
             getWeather()
             degreeTest = true
@@ -55,6 +55,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initialRun()
+    
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        userCurrentLocation()
+        
+    }
+    
+    func initialRun() {
+        
+        self.cityLabel.text = "Getting Weather!"
+        self.descriptionLabel.text = "Please Wait...."
+        iconImage.image = UIImage(named: "wifi")
+        self.temperatureLabel.text = "--"
+        self.degreeLabel.setTitle("?", forState: UIControlState.Normal)
+        
+    }
+    
+    func userCurrentLocation() {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -68,11 +90,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
         
-        weather.currentLocation(locValue.latitude, longitude: locValue.longitude)
+        if locationManager != "" {
+
+            weather.currentLocation(locValue.latitude, longitude: locValue.longitude)
         
-        getWeather()
+            getWeather()
         
-        self.locationManager.stopUpdatingLocation()
+            self.locationManager.stopUpdatingLocation()
+        
+        } else {
+            
+            userCurrentLocation()
+            
+        }
 
     }
     
@@ -81,6 +111,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         weather.downloadApiDetails { () -> () in
             
             self.configureUI()
+            
+            if self.weather.temperature != "" {
+                
+                self.backgroundColorChange()
+            
+            }else {
+            
+                self.view.backgroundColor = UIColor(red: 229.0/255.0, green: 229.0/255.0, blue: 229.0/255.0, alpha: 1.0)
+                
+                self.initialRun()
+                
+            }
             
         }
         
@@ -92,6 +134,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         descriptionLabel.text = weather.description
         iconImage.image = UIImage(named: weather.icon)
         temperatureLabel.text = weather.temperature
+        degreeLabel.setTitle("F°", forState: UIControlState.Normal)
         minTemperatureLabel.text = weather.minTemperature
         maxTemperatureLabel.text = weather.maxTemperature
         humidityLabel.text = weather.humidity
@@ -100,8 +143,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         sunsetLabel.text = weather.sunset
         windSpeedLabel.text = weather.windSpeed
         windDirectionLabel.text = weather.windDirection
-        
-        backgroundColorChange()
     
     }
     
@@ -116,105 +157,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if (temperatureTest) < 10 {
             self.view.backgroundColor = UIColor(red: 191/255, green: 54/255, blue: 12/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 10 && (temperatureTest) <= 19 {
+        }else if (temperatureTest) >= 10 && (temperatureTest) <= 19 {
             self.view.backgroundColor = UIColor(red: 216/255, green: 67/255, blue: 21/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 20 && (temperatureTest) <= 29 {
+        }else if (temperatureTest) >= 20 && (temperatureTest) <= 29 {
             self.view.backgroundColor = UIColor(red: 230/255, green: 74/255, blue: 25/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 30 && (temperatureTest) <= 39 {
+        }else if (temperatureTest) >= 30 && (temperatureTest) <= 39 {
             self.view.backgroundColor = UIColor(red: 244/255, green: 81/255, blue: 30/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 40 && (temperatureTest) <= 42 {
+        }else if (temperatureTest) >= 40 && (temperatureTest) <= 49 {
             self.view.backgroundColor = UIColor(red: 255/255, green: 138/255, blue: 101/255, alpha: 1.0)
             textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 43 && (temperatureTest) <= 45 {
-            self.view.backgroundColor = UIColor(red: 255/255, green: 183/255, blue: 77/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 46 && (temperatureTest) <= 49 {
-            self.view.backgroundColor = UIColor(red: 255/255, green: 204/255, blue: 128/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 50 && (temperatureTest) <= 51 {
+        }else if (temperatureTest) >= 50 && (temperatureTest) <= 59 {
             self.view.backgroundColor = UIColor(red: 220/255, green: 231/255, blue: 117/255, alpha: 1.0)
             textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 52 && (temperatureTest) <= 53 {
-            self.view.backgroundColor = UIColor(red: 230/255, green: 238/255, blue: 156/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 54 && (temperatureTest) <= 55 {
-            self.view.backgroundColor = UIColor(red: 197/255, green: 225/255, blue: 165/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 56 && (temperatureTest) <= 57 {
-            self.view.backgroundColor = UIColor(red: 174/255, green: 213/255, blue: 129/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 58 && (temperatureTest) <= 59 {
-            self.view.backgroundColor = UIColor(red: 129/255, green: 199/255, blue: 132/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 60 && (temperatureTest) <= 61 {
+        }else if (temperatureTest) >= 60 && (temperatureTest) <= 69 {
             self.view.backgroundColor = UIColor(red: 165/255, green: 214/255, blue: 167/255, alpha: 1.0)
             textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 62 && (temperatureTest) <= 63 {
-            self.view.backgroundColor = UIColor(red: 178/255, green: 223/255, blue: 219/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 64 && (temperatureTest) <= 65 {
-            self.view.backgroundColor = UIColor(red: 128/255, green: 203/255, blue: 196/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 66 && (temperatureTest) <= 67 {
-            self.view.backgroundColor = UIColor(red: 128/255, green: 222/255, blue: 234/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 68 && (temperatureTest) <= 69 {
-            self.view.backgroundColor = UIColor(red: 178/255, green: 235/255, blue: 242/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 70 && (temperatureTest) <= 71 {
+        }else if (temperatureTest) >= 70 && (temperatureTest) <= 79 {
             self.view.backgroundColor = UIColor(red: 179/255, green: 245/255, blue: 252/255, alpha: 1.0)
             textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 72 && (temperatureTest) <= 73 {
-            self.view.backgroundColor = UIColor(red: 129/255, green: 212/255, blue: 250/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 74 && (temperatureTest) <= 75 {
-            self.view.backgroundColor = UIColor(red: 79/255, green: 195/255, blue: 247/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 76 && (temperatureTest) <= 77 {
-            self.view.backgroundColor = UIColor(red: 41/255, green: 182/255, blue: 246/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        
-        if (temperatureTest) >= 78 && (temperatureTest) <= 79 {
-            self.view.backgroundColor = UIColor(red: 3/255, green: 169/255, blue: 244/255, alpha: 1.0)
-            textColor = UIColor.darkGrayColor()
-        }
-        if (temperatureTest) >= 80 && (temperatureTest) <= 89 {
+        }else if (temperatureTest) >= 80 && (temperatureTest) <= 89 {
             self.view.backgroundColor = UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 90 && (temperatureTest) <= 99 {
+        }else if (temperatureTest) >= 90 && (temperatureTest) <= 99 {
             self.view.backgroundColor = UIColor(red: 63/255, green: 81/255, blue: 181/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 100 && (temperatureTest) <= 109 {
+        }else if (temperatureTest) >= 100 && (temperatureTest) <= 109 {
             self.view.backgroundColor = UIColor(red: 57/255, green: 73/255, blue: 171/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
-        }
-        if (temperatureTest) >= 110 {
+        }else if (temperatureTest) >= 110 {
             self.view.backgroundColor = UIColor(red: 48/255, green: 63/255, blue: 159/255, alpha: 1.0)
             textColor = UIColor.whiteColor()
         }

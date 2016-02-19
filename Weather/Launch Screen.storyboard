@@ -39,17 +39,27 @@
                                     <constraint firstAttribute="width" constant="189" id="cRk-eD-CZc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="kI4-4b-IGP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kI4-4b-IGP">
                                 <rect key="frame" x="20" y="286" width="560" height="137"/>
-                                <string key="text">Created by : Amanda Wray Icon 01d.png, 02d.png
-Sunset &amp; Sunrise By Masrur Mahmood, CA
-Sun By Jessica Cardenas, US
-Weather By Anusha Narvekar, IN
-Anemometer By Modik, ES
-Weather By Jaclyne Ooi, CA
-Fog By Stefan Parnarov, BG
-Night Sky By Christian Mohr, DE
-App Iconc By Michael Flarup &amp; Pixelrt</string>
+                                <string key="text">All API's and Weather related datas provided by openweathermap.org
+Created by : Amanda Wray
+Icon 01d.png, 02d.png
+Sunset &amp; Sunrise
+By Masrur Mahmood, CA
+Sun
+By Jessica Cardenas, US
+Weather
+By Anusha Narvekar, IN
+Anemometer
+By Modik, ES
+Weather
+By Jaclyne Ooi, CA
+Fog
+By Stefan Parnarov, BG
+Night Sky
+By Christian Mohr, DE
+App Iconc
+By Michael Flarup &amp; Pixelresort</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

@@ -164,7 +164,7 @@ class Weather {
         Alamofire.request(.GET, nsUrl).responseJSON { response in
             
             let result = response.result
-            
+
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
                 if let city = dict["name"] as? String {

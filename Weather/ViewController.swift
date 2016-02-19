@@ -57,7 +57,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         initialRun()
+        
+        let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        appDelegate.myViewController = self
     
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -72,7 +81,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.descriptionLabel.text = "Please Wait...."
         iconImage.image = UIImage(named: "wifi")
         self.temperatureLabel.text = "--"
-        self.degreeLabel.setTitle("?", forState: UIControlState.Normal)
         
     }
     
@@ -134,7 +142,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         descriptionLabel.text = weather.description
         iconImage.image = UIImage(named: weather.icon)
         temperatureLabel.text = weather.temperature
-        degreeLabel.setTitle("F°", forState: UIControlState.Normal)
         minTemperatureLabel.text = weather.minTemperature
         maxTemperatureLabel.text = weather.maxTemperature
         humidityLabel.text = weather.humidity

@@ -81,7 +81,6 @@
 				8ED6CA531C6BCDF900927A71 /* Controller */,
 				8ED6CA521C6BCDF100927A71 /* View */,
 				8ED6CA511C6BCDEA00927A71 /* Model */,
-				8E99E5591C59069800121C88 /* AppDelegate.swift */,
 				8ED880E41C6ABF8A001D60D2 /* Attributes */,
 				8E4F94571C590A8100ABCFD6 /* Constants.swift */,
 				8E99E5601C59069800121C88 /* Assets.xcassets */,
@@ -93,6 +92,7 @@
 		8ED6CA511C6BCDEA00927A71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E99E5591C59069800121C88 /* AppDelegate.swift */,
 				8E4F94551C590A2B00ABCFD6 /* Weather.swift */,
 			);
 			name = Model;
@@ -377,7 +377,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anseha.HotWeather;
 				PRODUCT_NAME = "Hot Weather";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e9d434be-ca8f-40ce-af81-34f68886a796";
 			};
 			name = Debug;
 		};
@@ -386,8 +386,8 @@
 			baseConfigurationReference = DCDFC526A29E3E4EFBDE4EC5 /* Pods-Hot Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sun Chung (X4WTZDAHV3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sun Chung (GE7WBQ3TPK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -397,7 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anseha.HotWeather;
 				PRODUCT_NAME = "Hot Weather";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e9d434be-ca8f-40ce-af81-34f68886a796";
 			};
 			name = Release;
 		};
